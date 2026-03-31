@@ -2,7 +2,7 @@
 
 AgentCarryOn is a human-in-the-loop companion tool for long-running agent workflows.
 
-Chinese README: [README.zh-CN.md](./README.zh-CN.md)
+中文: [README.zh-CN.md](./README.zh-CN.md)
 
 It is designed for situations where an agent session is close to quota, close to interruption, or needs one more round of human guidance before the task is truly done. The tool lets the agent show a draft report or checkpoint file in a popup window, receive human instructions, and save the reviewed text for durable recordkeeping.
 
