@@ -2,6 +2,8 @@
 
 AgentCarryOn is a human-in-the-loop companion tool for long-running agent workflows.
 
+Chinese README: [README.zh-CN.md](./README.zh-CN.md)
+
 It is designed for situations where an agent session is close to quota, close to interruption, or needs one more round of human guidance before the task is truly done. The tool lets the agent show a draft report or checkpoint file in a popup window, receive human instructions, and save the reviewed text for durable recordkeeping.
 
 ## Purpose
@@ -80,12 +82,6 @@ You can use the following rule or prompt in English:
 
 ```text
 When you believe a task is close to completion, do not report to me directly. Instead, write the report text into a Markdown document, call aimonitor with the Markdown file path as an argument, and use the tool to receive the human's requested revisions. Even when no direct report is needed, you must still call aimonitor before the task is considered complete.
-```
-
-Chinese version:
-
-```text
-当你认为每个任务将要完成时，不要直接向我汇报，而是把准备汇报的文本写进一个 Markdown 文档，再调用 aimonitor，并把该 Markdown 文件路径作为参数传入。然后根据工具里收到的人类修改意见继续调整内容。即使当前不需要直接汇报，也必须在任务完成前调用一次 aimonitor。
 ```
 
 ## Release Guidance
