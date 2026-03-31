@@ -1,0 +1,11 @@
+linux/build/
+linux/AgentCarryOn-x86_64.AppImage
+windows/*.exe
+linux/AppDir/.DirIcon
+linux/AppDir/apprun-hooks/
+linux/AppDir/usr/bin/
+linux/AppDir/usr/lib/
+linux/AppDir/usr/share/fonts/
+linux/AppDir/usr/share/fontconfig/
+linux/AppDir/usr/share/glib-2.0/
+aimonitor_save/

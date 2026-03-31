@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export APPDIR="$HERE"
+export PATH="$APPDIR/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$APPDIR/usr/lib:${LD_LIBRARY_PATH:-}"
+export FONTCONFIG_PATH="$APPDIR/etc/fonts"
+export FONTCONFIG_FILE="$APPDIR/etc/fonts/fonts.conf"
+export XDG_DATA_DIRS="$APPDIR/usr/share:${XDG_DATA_DIRS:-}"
+export GSK_RENDERER="cairo"
+export GDK_DISABLE="vulkan"
+export GDK_BACKEND="wayland,x11"
+export LIBGL_ALWAYS_SOFTWARE="1"
+
+if [[ -d "$APPDIR/apprun-hooks" ]]; then
+  for hook in "$APPDIR"/apprun-hooks/*.sh; do
+    [[ -f "$hook" ]] || continue
+    # shellcheck disable=SC1090
+    source "$hook"
+  done
+fi
+
+export GDK_BACKEND="wayland,x11"
+export GSK_RENDERER="cairo"
+export GDK_DISABLE="vulkan"
+export LIBGL_ALWAYS_SOFTWARE="1"
+
+exec "$APPDIR/usr/bin/aimonitor" "$@"

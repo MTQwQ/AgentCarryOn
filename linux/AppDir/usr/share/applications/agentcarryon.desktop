@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=AgentCarryOn
+Exec=aimonitor
+Icon=agentcarryon
+Categories=Utility;
+Comment=Human-in-the-loop helper for keeping agent work moving under quota pressure
+Terminal=true
